@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+{{> head}}
+
+<body>
+
+  <div class="hero_area">
+
+     <!-- header section strats -->
+    {{> header_section}}
+     
+    <!-- end header section -->
+   
+   
+   
+
+
+    <!--register section starts -->
+    <div class="reg">
+    <div class="containerrl">
+      <div class="textrl">Registration</div>
+
+      {{#if msg}}
+      <p class="{{msg_type}}" >{{msg}}</p>
+      {{/if}}
+
+
+<!-- here we make a script file and create an route through the route only we access the script file and access Database -->
+      <form action="/auth/registerC" method="post">
+        <div class="datarl">
+          <label for="name">Full Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="datarl">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="datarl">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div class="datarl">
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" name="confirm_password" id="password" />
+        </div>
+
+        <div class="btnrl">
+          <button type="submit">Register</button>
+        </div>
+        <div class="signup-linkrl">
+          Already a member ? <a href="index.html">Login now</a>
+        </div>
+      </form>
+    </div>
+    </div>
+    <!--end of register-->
+    <br>
+
+
+   <!-- info section -->
+  {{> info_section}}
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <!-- info is enough -->
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
